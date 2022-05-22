@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\MembersController;
+use App\Http\Controllers\MenusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,5 @@ use App\Http\Controllers\UsersController;
 // });
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/users', [UsersController::class, 'index']);
+Route::get('/members', [MembersController::class, 'index']);
+Route::get('/menus', [MenusController::class, 'index']);
