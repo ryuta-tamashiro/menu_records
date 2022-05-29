@@ -17,8 +17,8 @@ class CreateMMenusTable extends Migration
             $table->id();
             $table->string('name', 100)->comment('メニュー名');
             $table->tinyInteger('menu_type')->comment('メニュー種別 1:主食 2:主菜 3:副菜');
-            $table->string('description', 100)->comment('詳細');
-            $table->string('url', 100)->comment('URL');
+            $table->string('description', 100)->nullable()->comment('詳細');
+            $table->string('url', 100)->nullable()->comment('URL');
             $table->tinyInteger('is_default')->comment('デフォルトフラグ');
             $table->integer('sort_no')->comment('並び順');
             $table->integer('operation_user_id')->comment('操作ユーザーID');
